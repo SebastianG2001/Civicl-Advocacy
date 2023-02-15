@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/purple_200"
+    android:id="@+id/photoDetailActivityLayout"
+    tools:context=".PhotoDetailActivity">
+    <TextView
+        android:id="@+id/tvCurrentLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="10sp"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tvRepName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/version"
+        android:layout_margin="6sp"
+        android:textSize="18sp"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvOffice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dataprovidedby"
+        android:layout_margin="6sp"
+        android:textSize="18sp"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="20sp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/imgRep"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/missing" />
+
+        <ImageView
+            android:id="@+id/imgParty"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:scaleType="fitXY"
+            android:layout_gravity="bottom|center"
+            android:src="@drawable/dem_logo" />
+    </FrameLayout>
+</LinearLayout>

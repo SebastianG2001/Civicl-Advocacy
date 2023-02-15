@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/topLayout"
+    android:background="@color/purple_200"
+    tools:context=".IndividualOfficialActivity">
+
+    <TextView
+        android:id="@+id/tvCurrentLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        android:gravity="center"
+        android:padding="10sp"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tvCurrentLocation">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvRepName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/version"
+                android:layout_margin="6sp"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvOffice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dataprovidedby"
+                android:layout_margin="6sp"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvRepParty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/version"
+                android:layout_margin="6sp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="6sp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imgFacebook"
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:onClick="facebookClicked"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/facebook" />
+
+                <ImageButton
+                    android:id="@+id/imgTwitter"
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:scaleType="fitXY"
+                    android:onClick="twitterClicked"
+                    android:src="@drawable/twitter" />
+
+                <ImageButton
+                    android:id="@+id/imgYoutube"
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:scaleType="fitXY"
+                    android:onClick="youTubeClicked"
+                    android:src="@drawable/youtube" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/imgRep"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/missing" />
+
+            <ImageView
+                android:id="@+id/imgParty"
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:scaleType="fitXY"
+                android:layout_gravity="bottom|center"
+                android:src="@drawable/dem_logo" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/address"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/address"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:linksClickable="true"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/phone"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvPhone"
+        android:linksClickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="14sp"
+        android:text="@string/address"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/email"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:linksClickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/address"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/website"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:id="@+id/urlLinks">
+        <!--
+    <TextView
+        android:id="@+id/tvWebsite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/address"
+        android:textColor="@color/white"
+        android:autoLink="all"
+        android:textStyle="bold"
+        android:focusable="true" />
+        -->
+    </LinearLayout>
+</LinearLayout>
